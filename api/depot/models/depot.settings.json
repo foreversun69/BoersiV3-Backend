@@ -1,0 +1,33 @@
+{
+  "kind": "collectionType",
+  "collectionName": "depots",
+  "info": {
+    "name": "Depot",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "users_permissions_user": {
+      "plugin": "users-permissions",
+      "model": "user",
+      "via": "depot"
+    },
+    "verlust_pro_monat": {
+      "type": "integer"
+    },
+    "einlagen": {
+      "type": "decimal"
+    },
+    "risiko_per_trade": {
+      "type": "decimal"
+    },
+    "trades": {
+      "via": "depot",
+      "collection": "trades"
+    }
+  }
+}

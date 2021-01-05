@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "trades",
+  "info": {
+    "name": "Trades",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "description": {
+      "type": "richtext"
+    },
+    "status": {
+      "model": "status",
+      "via": "trades"
+    },
+    "aktie": {
+      "model": "aktie",
+      "via": "trades"
+    },
+    "depot": {
+      "model": "depot",
+      "via": "trades"
+    },
+    "einkaufsdatum": {
+      "type": "datetime"
+    },
+    "verkaufsdatum": {
+      "type": "datetime"
+    },
+    "trailing_stop_datum": {
+      "type": "datetime"
+    },
+    "einkaufskurs": {
+      "type": "decimal"
+    },
+    "verkaufskurs": {
+      "type": "decimal"
+    },
+    "stueckzahl": {
+      "type": "decimal"
+    },
+    "stoppkurs": {
+      "type": "decimal"
+    },
+    "zielkurs": {
+      "type": "decimal"
+    }
+  }
+}

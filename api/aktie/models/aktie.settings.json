@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "akties",
+  "info": {
+    "name": "Stocks",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "value": {
+      "type": "string"
+    },
+    "wkn": {
+      "type": "string"
+    },
+    "typ": {
+      "type": "string"
+    },
+    "label": {
+      "type": "string"
+    },
+    "trades": {
+      "via": "aktie",
+      "collection": "trades"
+    }
+  }
+}
